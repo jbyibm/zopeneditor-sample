@@ -1,4 +1,4 @@
- PSAM1: PROC OPTIONS(MAIN) RETURNS(DEC(12,2));
+ PSAM: PROC OPTIONS(MAIN) RETURNS(DEC(12,2));
  /****************************************************************
   * LICENSED MATERIALS - PROPERTY OF IBM
   * "RESTRICTED MATERIALS OF IBM"
@@ -311,5 +311,5 @@
 
  PROGRAM_END:
  RETURN(BALANCE_AVG);
- END PSAM1;
+ END PSAM;
 
