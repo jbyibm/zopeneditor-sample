@@ -8,36 +8,7 @@
 ################################################################
 ---
 rules:
-  # Selection of ZCodeScan built-in rules for the SAM application
-  - id: zcodescan.cobol.rules.AcceptDateTimeRule
+  - id: "zcodescan.pli.rules.ProcedureFilenameMatchRule"
     severity: MEDIUM
-  - id: "zcodescan.cobol.rules.EvaluateNotIfRule"
+  - id: "zcodescan.pli.rules.GoToRule"
     severity: MEDIUM
-  - id: zcodescan.cobol.rules.RequireEndClauseRule
-    severity: HIGH
-    statements:
-      - name: "If"
-        value: true
-      - name: "Evaluate"
-        value: true
-      - name: "Read"
-        value: true
-      - name: "Search"
-        value: true
-      - name: "Call"
-        value: true
-  - id: zcodescan.cobol.rules.ProgramIdRule
-    severity: INFO
-  - id: zcodescan.cobol.rules.FileNameConventionRule
-    severity: HIGH
-    statements:
-      - name: "ConventionMask"
-        value: "SA.*"
-
-  # Custom rule defined in ./rules-domain.yaml
-  # Require that PROGRAM-ID be at least 4 characters long
-  - id: custom.cobol.rules.regex.ProgramIdRule
-    severity: INFO
-    parameters:
-      - name: "length"
-        value: 4
